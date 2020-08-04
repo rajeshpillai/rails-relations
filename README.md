@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## File Upload using Active Storage
+https://pragmaticstudio.com/tutorials/using-active-storage-in-rails
 
-Things you may want to cover:
+rails active_storage:install
 
-* Ruby version
+rails db:migrate
 
-* System dependencies
 
-* Configuration
+ Model ->
+   -> has_one_attached :featured_image
 
-* Database creation
+View
+  -> 
+    <%= form.label :featured_image %>
+    <%= form.file_field :featured_image %>
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Display Image
+<%= image_tag @post.featured_image %>
