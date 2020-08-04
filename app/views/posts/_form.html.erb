@@ -17,6 +17,17 @@
   </div>
 
   <div class="field">
+      <%= form.text_field :all_tags, 
+      placeholder: "Tags separated with comma" %>
+  </div>
+
+  <div class="field">
+      <span>TAGS:</span><br/>
+      <%= form.collection_select :tag_ids, Tag.all, :id, :name, 
+          {include_blank: true}, {:multiple => true} %>
+  </div>
+
+  <div class="field">
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
