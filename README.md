@@ -20,3 +20,4 @@ Display Image
 # Gems
 - Friendly_ID Gem
 - Ransack Gem (search, sort etc)
+- Kaminari Gem (paginate)
