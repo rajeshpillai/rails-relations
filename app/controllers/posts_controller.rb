@@ -1,3 +1,6 @@
+# https://github.com/activerecord-hackery/ransack
+# https://anadea.info/blog/ultimate-index-pages-by-ransack
+
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -9,7 +12,7 @@ class PostsController < ApplicationController
     # ransack 
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true) 
-    
+
   end
 
   # GET /posts/1
