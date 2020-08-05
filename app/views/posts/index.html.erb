@@ -3,6 +3,16 @@
 <h1>Posts</h1>
 
 <%= link_to 'New Post', new_post_path %>
+
+<%= search_form_for @q do |f| %>
+
+  # Search if the name field contains...
+  <%= f.label :title %>
+  <%= f.search_field :title_cont %>
+
+  <%= f.submit %>
+<% end %>
+
 <table class="table table-condesed table-bordered">
   <thead>
     <tr>
