@@ -5,6 +5,10 @@ class Post < ApplicationRecord
   has_many :tags, through: :taggings 
   has_one_attached :featured_image 
 
+  # for friendly ID
+  extend FriendlyId 
+  friendly_id :title, use: :slugged
+
   def all_tags=(tags)
     if tags.blank?
       return
